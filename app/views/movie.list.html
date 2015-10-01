@@ -1,9 +1,9 @@
 <h2>Movie list</h2>
 <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="item in movies">
+    <div class="col-sm-6 col-md-4" ng-repeat="item in movies | orderBy: 'title'">
         <div class="thumbnail">
-            <img ng-src="{{item.thumbImage}}" alt="item.title" class="img-max-height">
-            <img ng-if="!item.thumbImage && item.thumbImage !== ''" ng-src="http://www.keeakendama.com/wp-content/themes/roxx/images/default_thumb.jpg" alt="item.title" class="img-max-height">
+            <img ng-show="item.thumbImage != 'http://image.tmdb.org/t/p/w185'" ng-src="{{item.thumbImage}}" alt="{{item.title}}" class="img-max-height">
+            <img ng-show="item.thumbImage == 'http://image.tmdb.org/t/p/w185'" src="http://www.keeakendama.com/wp-content/themes/roxx/images/default_thumb.jpg" alt="{{item.title}}" class="img-max-height">
             <div class="caption">
                 <h3 class="trim-info" ng-bind="item.title" ui-sref="movie.detail({id: item.id})"></h3>
                 <!--<p>{{ item.overview | limitTo: 150 }}{{item.overview.length > 150 ? '...' : ''}}</p>-->

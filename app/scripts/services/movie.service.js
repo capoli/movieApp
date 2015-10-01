@@ -63,11 +63,27 @@
                     .then(callbacks.success, callbacks.error);
             }
 
+            function addById(id, post) {
+                var callbacks = {
+                    success: function (res) {
+                        console.log('addById');
+                        console.log(res.data);
+                        return res.data;
+                    },
+                    error: function () {
+                        $q.reject('error: ' + ConfigService.server + '/Movies/' + id);
+                    }
+                };
+                return $http.post(ConfigService.server + '/Movies/' + id, post)
+                    .then(callbacks.success, callbacks.error);
+            }
+
             return {
                 getAll: getAll,
                 getById: getById,
                 deleteById: deleteById,
-                searchByTitle: searchByTitle
+                searchByTitle: searchByTitle,
+                addById: addById
             }
         }]);
 })();
