@@ -1,0 +1,18 @@
+<h2>Movies found for <span ng-bind="searchedTitle.title"></span></h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>title</th>
+        <th>release date</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="item in moviesFound">
+        <td ng-bind="item.title"></td>
+        <td>{{item.releaseDate | date: 'd/MM/yyyy'}}</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>

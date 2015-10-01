@@ -1,0 +1,28 @@
+.trim-info {
+    max-width: 90%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.4;
+    position: relative;
+}
+.trim-overview {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    max-width: 90%;
+    height: 98px; /* Fallback for non-webkit */
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.4;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+}
+
+.img-max-height {
+    min-height: 278px;
+    max-height: 278px;
+}
