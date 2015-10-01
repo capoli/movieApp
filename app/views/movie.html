@@ -1,4 +1,6 @@
 <h1>Movies</h1>
+<h2>Added: <span ng-bind="added"></span></h2>
+<h2>Deleted: <span ng-bind="deleted"></span></h2>
 
 <input ng-model="title" type="text">
 <button class="btn btn-default" ng-click="searchTitle(title)">Search</button>
@@ -6,3 +8,5 @@
 <div ui-view></div>
 
 <button class="btn btn-primary btn-lg btn-block" ng-click="insertAll()">Insert all</button>
+<button class="btn btn-danger btn-lg btn-block" ng-click="deleteAll()">Delete all</button>
+<button class="btn btn-warning btn-lg btn-block" ng-click="loop()">Do both</button>

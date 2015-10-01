@@ -6,8 +6,6 @@
             function getAll() {
                 var callbacks = {
                     success: function (res) {
-                        console.log('getAll');
-                        console.log(res.data);
                         return res.data;
                     },
                     error: function () {
@@ -21,8 +19,6 @@
             function getById(id) {
                 var callbacks = {
                     success: function (res) {
-                        console.log('getById');
-                        console.log(res.data);
                         return res.data;
                     },
                     error: function () {
@@ -36,8 +32,6 @@
             function deleteById(id) {
                 var callbacks = {
                     success: function (res) {
-                        console.log('deleteById');
-                        console.log(res.data);
                         return res.data;
                     },
                     error: function () {
@@ -51,8 +45,6 @@
             function searchByTitle(title) {
                 var callbacks = {
                     success: function (res) {
-                        console.log('searchByTitle');
-                        console.log(res.data);
                         return res.data;
                     },
                     error: function () {
@@ -66,8 +58,6 @@
             function addById(id, post) {
                 var callbacks = {
                     success: function (res) {
-                        console.log('addById');
-                        console.log(res.data);
                         return res.data;
                     },
                     error: function () {
